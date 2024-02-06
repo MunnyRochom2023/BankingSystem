@@ -49,11 +49,16 @@ The Account class manages standard bank accounts, including deposits, withdrawal
     - `calculateInterest(): void`: Calculates and adds interest to the account balance based on the interest rate.
 
 ## 3. Banking System
+### Class diagram
+![image](https://github.com/MunnyRochom2023/BankingSystem/assets/151621221/584140b6-a646-448f-83f2-53d840432647)
+
+### User case diagram
+![image](https://github.com/MunnyRochom2023/BankingSystem/assets/151621221/d324d227-8e3c-43cb-9cc0-99c09874ece7)
+
 ### Inheritance
 ### Encapsulation
 ### Polymorphism
-### Class diagram
-### User case diagram
+
 
 - Demonstrates encapsulation by encapsulating fields within classes.
 - Achieves polymorphism through the overridden `withdraw` method in the "SavingAccount" class.
