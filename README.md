@@ -9,12 +9,9 @@ This project implements a simple banking system with two classes: Account and Sa
 
 - [1. Account Class in Banking System](#AccountClassinBankingSystem)
 - [2. SavingAccount Class in Banking](#SavingAccountClassinBanking)
-- [3. User Interface](#UserInterface)
-- [4. View Account Interface](#ViewAccountInterface)
-- [Banking System](#classes)
-- [Contributing](#contributing)
-- [License](#license)
-
+- [3. Banking System](#BankingSystem)
+- [4. User Interface](#UserInterface)
+- [5. View Account Interface](#ViewAccountInterface)
 ## 1. Account Class in Banking System
 
 - **Account class (superclass):**
@@ -51,13 +48,18 @@ The Account class manages standard bank accounts, including deposits, withdrawal
     - `withdraw(amount: double): void` (Overridden to include penalty)
     - `calculateInterest(): void`: Calculates and adds interest to the account balance based on the interest rate.
 
-
-### Encapsulation, Polymorphism, and Superclass-Subclass Relationship
+## 3. Banking System
+### Inheritance
+### Encapsulation
+### Polymorphism
+### Class diagram
+### User case diagram
 
 - Demonstrates encapsulation by encapsulating fields within classes.
 - Achieves polymorphism through the overridden `withdraw` method in the "SavingAccount" class.
 - Establishes a proper superclass-subclass relationship with "SavingAccount" inheriting from the "Account" class.
-## User Interface
+  
+## 4. User Interface
 - **1. CreateAccount:**
 
 When the user selects "CreateAccount" (option 1), the system prompts the user to input `AccountNumber`, `AccountHolder` and `PIN`(digits only). The user information is stored in a text file named `Userinfo.txt` 
@@ -75,7 +77,7 @@ When the user selects "Account" (option 2), the system prompts the user to input
 - If the information is correct:
  - The system proceeds to the `viewAccount`viewAccount interface.
 
-## View Account Interface
+## 5. View Account Interface
 - **a. Setbalance**
 - **b. DepositMoney**
 - **c. WithdrawMoney**
@@ -103,19 +105,6 @@ When the user selects "Account" (option 2), the system prompts the user to input
 
 After this, the system closes.
 
-## Requirements
-
-- Java Development Kit (JDK)
-- Any Java IDE (Integrated Development Environment)
-
-## Banking System
-- Classes:
-    - `Account` : 
-    - `SavingAccount`:
-    - `CalculateInterest`: 
-    - `calculateInterest(): void`
-![Alt text](image.png)
-![Alt text](image-1.png)
 
 
 
