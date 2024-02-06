@@ -59,20 +59,33 @@ The Account class manages standard bank accounts, including deposits, withdrawal
 
  **Inheritance:** 
     - Account Class (superclass):
+    
         - The SavingAccount class is a subclass of the Account class.
+        
         - SavingAccount inherits the fields (accountNumber, accountHolder, balance) and methods (getAccountNumber, getAccountHolder, getBalance, deposit, withdraw) from the Account class.
+        
 **Encapsulation:**
     - Account Class (superclass):
+    
         - The fields (accountNumber, accountHolder, balance) are declared as private, encapsulating the internal state of the class.
-       -  Access to these fields is provided through public getter methods (getAccountNumber, getAccountHolder, getBalance).
+        
+        -  Access to these fields is provided through public getter methods (getAccountNumber, getAccountHolder, getBalance).
+        
         - The deposit and withdraw methods encapsulate the logic for updating the balance, ensuring that the internal state is modified in a controlled manner.
+        
     - SavingAccount Class (subclass):
+    
         - The SavingAccount class encapsulates additional functionality related to savings accounts, such as interest rates.
+        
         - The interestRate field is encapsulated within the class, and access is provided through getter and setter methods (getInterestRate, setInterestRate).
+        
 **Polymorphism:**
     - Account Class (superclass):
+    
         - Polymorphism is evident in the withdraw method, which is overridden in the SavingAccount subclass. The SavingAccount version of the method includes penalty logic in addition to the standard withdrawal functionality.
+        
     - SavingAccount Class (subclass):
+    
         - The withdraw method is overridden in the SavingAccount class, demonstrating polymorphism by providing a specialized implementation of the method in the subclass.
         
 ## 2. User Interface
@@ -86,7 +99,9 @@ When the user selects "Account" (option 2), the system prompts the user to input
 
 - If the information is incorrect:
  - `Account not found. Please create an account.`
+   
 - The system then gives the option to create an account (option 1).
+  
 - If the information is correct:
  - The system proceeds to the `viewAccount` viewAccount interface.
 
