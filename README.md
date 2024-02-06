@@ -8,9 +8,9 @@ This project implements a simple banking system with two classes: Account and Sa
 ## Table of Contents
 
 - [1. Class in Banking System](#AccountClassinBankingsystem)
-- [2. SavingAccount Class in Banking](#SavingAccountClassinBanking)
-- [3. User Interface](#UserInterface)
-- [4. View Account Interface](#ViewAccountInterface)
+- [2. User Interface](#UserInterface)
+- [3. View Account Interface](#ViewAccountInterface)
+- [4. Saving Account](#SavingAccount)
   
 ## 1. Classes in Banking System
 ### 1. Account Class in Banking System
@@ -49,31 +49,33 @@ The Account class manages standard bank accounts, including deposits, withdrawal
     - `withdraw(amount: double): void` (Overridden to include penalty)
     - `calculateInterest(): void`: Calculates and adds interest to the account balance based on the interest rate.
 
-    ### Banking System
-**Class diagram**
+### 3. Banking System
+
+**Class diagram:**
 ![image](https://github.com/MunnyRochom2023/BankingSystem/assets/151621221/584140b6-a646-448f-83f2-53d840432647)
 
-**User case diagram**
+**User case diagram:**
 ![image](https://github.com/MunnyRochom2023/BankingSystem/assets/151621221/d324d227-8e3c-43cb-9cc0-99c09874ece7)
 
- **Inheritance** 
-    Account Class (superclass):
-        The SavingAccount class is a subclass of the Account class.
-        SavingAccount inherits the fields (accountNumber, accountHolder, balance) and methods (getAccountNumber, getAccountHolder, getBalance, deposit, withdraw) from the Account class.
-**Encapsulation**
-    Account Class (superclass):
-        The fields (accountNumber, accountHolder, balance) are declared as private, encapsulating the internal state of the class.
-        Access to these fields is provided through public getter methods (getAccountNumber, getAccountHolder, getBalance).
-        The deposit and withdraw methods encapsulate the logic for updating the balance, ensuring that the internal state is modified in a controlled manner.
-    SavingAccount Class (subclass):
-        The SavingAccount class encapsulates additional functionality related to savings accounts, such as interest rates.
-        The interestRate field is encapsulated within the class, and access is provided through getter and setter methods (getInterestRate, setInterestRate).
-**Polymorphism**
-    Account Class (superclass):
-        Polymorphism is evident in the withdraw method, which is overridden in the SavingAccount subclass. The SavingAccount version of the method includes penalty logic in addition to the standard withdrawal functionality.
-    SavingAccount Class (subclass):
-        The withdraw method is overridden in the SavingAccount class, demonstrating polymorphism by providing a specialized implementation of the method in the subclass.
-## 4. User Interface
+ **Inheritance:** 
+    - Account Class (superclass):
+        - The SavingAccount class is a subclass of the Account class.
+        - SavingAccount inherits the fields (accountNumber, accountHolder, balance) and methods (getAccountNumber, getAccountHolder, getBalance, deposit, withdraw) from the Account class.
+**Encapsulation:**
+    - Account Class (superclass):
+        - The fields (accountNumber, accountHolder, balance) are declared as private, encapsulating the internal state of the class.
+       -  Access to these fields is provided through public getter methods (getAccountNumber, getAccountHolder, getBalance).
+        - The deposit and withdraw methods encapsulate the logic for updating the balance, ensuring that the internal state is modified in a controlled manner.
+    - SavingAccount Class (subclass):
+        - The SavingAccount class encapsulates additional functionality related to savings accounts, such as interest rates.
+        - The interestRate field is encapsulated within the class, and access is provided through getter and setter methods (getInterestRate, setInterestRate).
+**Polymorphism:**
+    - Account Class (superclass):
+        - Polymorphism is evident in the withdraw method, which is overridden in the SavingAccount subclass. The SavingAccount version of the method includes penalty logic in addition to the standard withdrawal functionality.
+    - SavingAccount Class (subclass):
+        - The withdraw method is overridden in the SavingAccount class, demonstrating polymorphism by providing a specialized implementation of the method in the subclass.
+        
+## 2. User Interface
 ### 1. CreateAccount
 - When the user selects "CreateAccount" (option 1), the system prompts the user to input `AccountNumber`, `AccountHolder` and `PIN`(digits only). The user information is stored in a text file named `Userinfo.txt` 
 - Example:
