@@ -9,9 +9,9 @@ This project implements a simple banking system with two classes: Account and Sa
 
 - [1. Class in Banking System](#AccountClassinBankingsystem)
 - [2. SavingAccount Class in Banking](#SavingAccountClassinBanking)
-- [4. User Interface](#UserInterface)
-- [5. View Account Interface](#ViewAccountInterface)
-- [. Banking System](#BankingSystem)
+- [3. User Interface](#UserInterface)
+- [4. View Account Interface](#ViewAccountInterface)
+  
 ## 1. Classes in Banking System
 ### 1. Account Class in Banking System
 
@@ -49,32 +49,37 @@ The Account class manages standard bank accounts, including deposits, withdrawal
     - `withdraw(amount: double): void` (Overridden to include penalty)
     - `calculateInterest(): void`: Calculates and adds interest to the account balance based on the interest rate.
 
-## 3. Banking System
-### Class diagram
+    ### Banking System
+**Class diagram**
 ![image](https://github.com/MunnyRochom2023/BankingSystem/assets/151621221/584140b6-a646-448f-83f2-53d840432647)
 
-### User case diagram
+**User case diagram**
 ![image](https://github.com/MunnyRochom2023/BankingSystem/assets/151621221/d324d227-8e3c-43cb-9cc0-99c09874ece7)
 
-### Inheritance
-### Encapsulation
-### Polymorphism
-
-- Demonstrates encapsulation by encapsulating fields within classes.
-- Achieves polymorphism through the overridden `withdraw` method in the "SavingAccount" class.
-- Establishes a proper superclass-subclass relationship with "SavingAccount" inheriting from the "Account" class.
-  
+ **Inheritance** 
+    Account Class (superclass):
+        The SavingAccount class is a subclass of the Account class.
+        SavingAccount inherits the fields (accountNumber, accountHolder, balance) and methods (getAccountNumber, getAccountHolder, getBalance, deposit, withdraw) from the Account class.
+**Encapsulation**
+    Account Class (superclass):
+        The fields (accountNumber, accountHolder, balance) are declared as private, encapsulating the internal state of the class.
+        Access to these fields is provided through public getter methods (getAccountNumber, getAccountHolder, getBalance).
+        The deposit and withdraw methods encapsulate the logic for updating the balance, ensuring that the internal state is modified in a controlled manner.
+    SavingAccount Class (subclass):
+        The SavingAccount class encapsulates additional functionality related to savings accounts, such as interest rates.
+        The interestRate field is encapsulated within the class, and access is provided through getter and setter methods (getInterestRate, setInterestRate).
+**Polymorphism**
+    Account Class (superclass):
+        Polymorphism is evident in the withdraw method, which is overridden in the SavingAccount subclass. The SavingAccount version of the method includes penalty logic in addition to the standard withdrawal functionality.
+    SavingAccount Class (subclass):
+        The withdraw method is overridden in the SavingAccount class, demonstrating polymorphism by providing a specialized implementation of the method in the subclass.
 ## 4. User Interface
 ### 1. CreateAccount
-
-- **CreateAccount:**
 - When the user selects "CreateAccount" (option 1), the system prompts the user to input `AccountNumber`, `AccountHolder` and `PIN`(digits only). The user information is stored in a text file named `Userinfo.txt` 
 - Example:
 - 00410053/Munny/123
   
   ### 2. Account
-  
-- ** Account**
 When the user selects "Account" (option 2), the system prompts the user to input `AccountNumber`, `AccountHolder` and `PIN`(digits only).The system checks if the user input matches the information in `Userinfo.txt`
 
 - If the information is incorrect:
@@ -83,7 +88,7 @@ When the user selects "Account" (option 2), the system prompts the user to input
 - If the information is correct:
  - The system proceeds to the `viewAccount` viewAccount interface.
 
-## 5. View Account Interface
+## 3. View Account Interface
 
 ### a. Setbalance
 **Setbalance**
@@ -98,7 +103,7 @@ The user can set their balance.
     The user can withdraw money.
       - for example, WithdrawMoney: 200$. The system displays the updated balance.
       
-## Saving Account 
+## 4. Saving Account 
 ### SavingAccount
 
 **Set InterestRate**
@@ -112,6 +117,7 @@ The user can set their balance.
     Balance: 1100.54$
 
 **the system closes.**
+
 
 
 
