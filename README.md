@@ -7,7 +7,7 @@ This project implements a simple banking system with two classes: Account and Sa
 
 ## Table of Contents
 
-- [1. Account Class in Banking System](#AccountClassinBankingSystem)
+- [1. Account Class in Banking System]
 - [2. SavingAccount Class in Banking](#SavingAccountClassinBanking)
 - [3. Banking System](#BankingSystem)
 - [4. User Interface](#UserInterface)
